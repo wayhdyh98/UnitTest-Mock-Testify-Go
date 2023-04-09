@@ -10,7 +10,7 @@ type ProductRepositoryMock struct {
 	Mock mock.Mock
 }
 
-func (repository *ProductRepositoryMock) GetProductById(id string) *models.ProductModel {
+func (repository *ProductRepositoryMock) GetProductById(id uint) *models.ProductModel {
 	args := repository.Mock.Called(id)
 
 	if args.Get(0) == nil {
